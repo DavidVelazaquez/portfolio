@@ -1,0 +1,168 @@
+.skill {
+  width: 80%;
+  height: 22px;
+  background-color: $color-dark-gray;
+  margin: map-get($margin, small) 0;
+  font-size: map-get($fs, small) - 3;
+  position: relative;
+  border-radius: 5px;
+}
+
+// styles for pseudoelement ::before below
+
+.before {
+  @include flex-center;
+  width: 90px;
+  height: inherit;
+  text-align: center;
+  font-size: map-get($fs, small) - 4;
+  padding: map-get($padding, small) - 5 map-get($padding, medium) - 3;
+  background: $color-notImportant;
+  color: $color-light-gray;
+  position: absolute;
+  box-sizing: border-box;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  border-radius: 4px;
+}
+
+// styles for pseudoelement ::before above
+
+// filling for skills below
+
+.span {
+  position: absolute;
+  left: 0;
+  height: inherit;
+  padding-right: map-get($padding, small);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: $color-secondary;
+  border-radius: 5px;
+  color: $color-light-gray;
+  font-weight: bold;
+}
+
+// filling for skills above
+
+.css {
+  position: relative;
+  &::before {
+    content: "CSS3";
+    @extend .before;
+  }
+  span {
+    @extend .span;
+    width: 80%;
+  }
+}
+
+.html {
+  position: relative;
+  &::before {
+    content: "HTML5";
+    @extend .before;
+  }
+  span {
+    @extend .span;
+    width: 90%;
+  }
+}
+
+.js {
+  position: relative;
+  &::before {
+    content: "JavaScript";
+    @extend .before;
+  }
+  span {
+    @extend .span;
+    width: 50%;
+  }
+}
+
+.git {
+  position: relative;
+  &::before {
+    content: "Git";
+    @extend .before;
+  }
+  span {
+    @extend .span;
+    width: 70%;
+  }
+}
+
+.bootstrap {
+  position: relative;
+  &::before {
+    content: "Bootstrap";
+    @extend .before;
+  }
+  span {
+    @extend .span;
+    width: 70%;
+  }
+}
+
+.sass {
+  position: relative;
+  &::before {
+    content: "Sass";
+    @extend .before;
+  }
+  span {
+    @extend .span;
+    width: 70%;
+  }
+}
+
+.react {
+  position: relative;
+  &::before {
+    content: "ReactJS";
+    @extend .before;
+  }
+  span {
+    @extend .span;
+    width: 45%;
+  }
+}
+
+.node {
+  position: relative;
+  &::before {
+    content: "NodeJS";
+    @extend .before;
+  }
+  span {
+    @extend .span;
+    width: 45%;
+  }
+}
+
+.express {
+  position: relative;
+  &::before {
+    content: "ExpressJS";
+    @extend .before;
+  }
+  span {
+    @extend .span;
+    width: 55%;
+  }
+}
+
+.docker {
+  position: relative;
+  &::before {
+    content: "Docker";
+    @extend .before;
+  }
+  span {
+    @extend .span;
+    width: 50%;
+  }
+}

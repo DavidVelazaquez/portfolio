@@ -1,0 +1,9 @@
+extends layout-port.pug
+
+block content
+   section.error-container
+      h1.error__title= `${error} 😵`
+      h2.error__code= `Error code ${statusCode}`
+      h2.error__subtitle= message
+      if stack
+         pre.error__stack #{stack}

@@ -1,0 +1,27 @@
+@import "_mixins";
+@import "_variables";
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  @include flex-center;
+  flex-direction: column;
+  background-color: $color-light-gray;
+  font-family: "Quicksand", sans-serif;
+}
+
+.container {
+  width: 90%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+@import "_error";
+@import "_navbar";
+@import "_about";
+@import "_portfolio";
+@import "_skills";
+@import "_footer";
+@import "_queries";

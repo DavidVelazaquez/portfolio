@@ -1,0 +1,30 @@
+.error-container {
+  width: $width-containers + 10;
+  margin: 50px 0;
+  margin-bottom: 30vh;
+  padding: 20px 50px;
+  background-color: $color-primary;
+  border-radius: 20px;
+}
+
+.error__title {
+  font-size: map-get($fs, large) - 2;
+  color: $color-light-gray;
+}
+
+.error__subtitle {
+  color: $color-light-gray;
+}
+
+.error__code {
+  color: $color-light-gray;
+}
+
+.error__stack {
+  color: $color-light-gray;
+  font-size: map-get($fs, small) + 1;
+  padding: 15px 0;
+  padding-left: 20px;
+  border-left: 4px solid red;
+  overflow: scroll;
+}

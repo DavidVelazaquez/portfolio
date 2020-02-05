@@ -1,0 +1,73 @@
+extends layout-port.pug
+
+block content
+  nav.navbar#home
+   section.navbar-container
+      section.navbar__container-upper
+         section.navbar-card
+            figure.navbar__card-figure
+               img(src="https://scontent.fgdl5-1.fna.fbcdn.net/v/t1.0-9/p720x720/50720476_2305075292839104_7519845337037537280_o.jpg?_nc_cat=111&_nc_oc=AQkl19wXI2i2zmm97Onm-WIKXhapL4yzHTqo3qYi_8nAnapPab4OnvagagOG2I5ktUCkzNyNV3GMdU9Tx0oyVIQg&_nc_ht=scontent.fgdl5-1.fna&_nc_tp=1002&oh=fcbba17d994d95c4f982dee3a6a4606e&oe=5E94850C", alt="my picture")
+            .myInfo-container
+               h1.myInfo-title David Velazquez Vergara
+               h2.myInfo-subtitle Full Stack JavaScript student
+         ul.list
+            li
+               a(href="#about") About
+            li
+               a(href="#portfolio") Portfolio
+            //- li
+            //-    a(href="") Blog
+            li
+               a(href="/static/assets/my-cv.pdf" target='_blank') CV
+      section.contact
+         a(href="https://twitter.com/David35736675" target='_blank')
+            img(src="/static/assets/images/twitter.png", alt="twitter icon")
+         a(href="https://github.com/DavidVelazaquez" target='_blank')
+            img(src="/static/assets/images/github.png", alt="github icon")
+         a(href="https://www.linkedin.com/in/david-velazquez-aa5072115/" target='_blank')
+            img(src="/static/assets/images/linkedin.png", alt="linkedin icon")
+         a(href="https://www.facebook.com/davidarmando.velazquezvergara" target='_blank')
+            img(src="/static/assets/images/facebook.png", alt="facebook icon")
+
+
+  section.about-container#about
+   article.about__info
+      h1.about__title Who am I?
+      p.about__paragraph I am Full Stack JavaScript developer student who likes doing new and different things, who enjoys when challenged, who worries about being a better person every day, who wants to create and/or find solutions to the problems sorrounding us.
+   article.about__skills
+      h1.skills__title Skills
+      .skill.html
+         span 90%
+      .skill.css
+         span 80%
+      .skill.js
+         span 45%
+      .skill.git
+         span  70%
+      .skill.bootstrap
+         span  70%
+      .skill.sass
+         span 70%
+      .skill.react
+         span 40%
+      .skill.node
+         span  40%
+      .skill.express
+         span  50%
+      .skill.docker
+         span  45%
+
+
+  h1.portfolio__title#portfolio Practice Projects
+  section.portfolio
+    section.portfolio-container
+      each project in projects
+        .card
+          figure.portfolio__figure
+              img(src= project.image, alt="project image")
+          .card__info
+            h1.portfolio__card-title= project.name
+            p.portfolio__paragraph= project.description
+            a(href= project.link target='_blank').portfolio__btn Open
+  a(href="#home").home__btn
+    img(src="/static/assets/images/arrow-up.png", alt="")

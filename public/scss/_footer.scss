@@ -1,0 +1,23 @@
+.footer {
+  width: 100%;
+  height: 90px;
+  background-color: $color-primary;
+  @include flex-center;
+}
+
+.footer-container {
+  width: $width-containers;
+  @include flex-center;
+  justify-content: space-between;
+}
+
+.footer__title {
+  color: $color-light-gray;
+  font-weight: 200;
+  font-size: map-get($fs, small) - 2;
+}
+
+.footer__date {
+  color: $color-light-gray;
+  font-size: map-get($fs, small) - 2;
+}

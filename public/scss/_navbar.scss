@@ -1,0 +1,112 @@
+.navbar {
+  width: 100%;
+  height: 200px;
+  margin: 0;
+  padding: 0;
+  background-color: #1b1e22;
+  display: flex;
+  justify-content: center;
+}
+
+.myInfo-title {
+  margin: 0;
+  margin-bottom: 5px;
+  color: $color-light-gray;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+.myInfo-subtitle {
+  margin: 0;
+  color: $color-light-gray;
+  font-size: 1em;
+  color: $color-notImportant;
+}
+
+.navbar-container {
+  width: $width-containers;
+  height: 100%;
+  padding: 0 4vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.navbar__container-upper {
+  height: 75%;
+  @include flex-center;
+  justify-content: space-between;
+}
+
+.navbar-card {
+  @include flex-center;
+  justify-content: flex-start;
+}
+
+.navbar__card-figure {
+  width: 80px;
+  height: 95px;
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.navbar__card-figure img {
+  width: 130%;
+  height: 140%;
+  position: relative;
+  top: -20px;
+}
+
+.myInfo-container {
+  margin: 0 15px;
+}
+
+.list {
+  height: 100%;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.list li {
+  list-style: none;
+  padding: 2px 6px;
+  text-align: center;
+  border: 1px solid $color-light-gray;
+  border-radius: 8px;
+  @include flex-center;
+}
+
+.list a {
+  width: 80px;
+  width: 100%;
+  color: $color-light-gray;
+  text-decoration: none;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.list li:hover {
+  background-color: #e6e1e11c;
+}
+
+.contact {
+  width: 100%;
+  height: 25%;
+  @include flex-center;
+  justify-content: flex-start;
+  padding: 10px;
+}
+
+.contact a {
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.contact a img {
+  width: 22px;
+}
