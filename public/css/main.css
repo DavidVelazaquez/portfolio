@@ -490,7 +490,7 @@ body {
 
 @media (max-width: 700px) {
   .navbar {
-    height: 720px;
+    height: 640px;
     padding: 20px;
   }
 
@@ -512,23 +512,20 @@ body {
   }
 
   .myInfo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    text-align: center;
     margin-top: 30px;
   }
 
   .myInfo-title {
-    font-size: 28px;
+    font-size: 26px;
   }
 
   .myInfo-subtitle {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .list a {
-    font-size: 18px;
+    font-size: 16px;
     padding: 0 10px;
   }
 
@@ -537,7 +534,7 @@ body {
   }
 
   .contact a img {
-    width: 35px;
+    width: 30px;
     margin: 0 7px;
     align-items: baseline;
   }
@@ -548,7 +545,7 @@ body {
   }
 
   .about__info {
-    width: 115%;
+    width: 110%;
   }
 
   .about__skills {
@@ -558,6 +555,10 @@ body {
   .portfolio__figure {
     width: 140%;
     height: 108%;
+  }
+
+  .portfolio__paragraph {
+    font-size: 13px;
   }
 }
 
