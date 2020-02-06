@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index",
-    "build": "cross-env NODE_ENV=production cd public/css && cleancss -o main.min.css main.css"
+    "build": "cross-env NODE_ENV=production /public/css && cleancss -o main.min.css main.css"
   },
   "author": "David Velazquez davidarmando.gdl@live.com",
   "license": "ISC",
