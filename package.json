@@ -4,15 +4,17 @@
   "description": "Personal Portfolio",
   "main": "index.js",
   "scripts": {
-    "start-sass": "sass --watch public/scss/main.scss public/css/main.css",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index",
+    "build": "cross-env NODE_ENV=production cd public/css && cleancss -o main.min.css main.css"
   },
   "author": "David Velazquez davidarmando.gdl@live.com",
   "license": "ISC",
   "dependencies": {
+    "cross-env": "^7.0.0",
     "dotenv": "^8.2.0",
     "ejs": "^3.0.1",
     "express": "^4.17.1",
+    "helmet": "^3.21.2",
     "mongodb": "^3.5.2",
     "pug": "^2.0.4"
   },

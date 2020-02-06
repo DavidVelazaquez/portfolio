@@ -40,5 +40,3 @@ class MongoLib {
 }
 
 module.exports = MongoLib;
-
-console.log(config);

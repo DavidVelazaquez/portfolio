@@ -1,10 +1,13 @@
 const express = require("express");
 const path = require("path");
 const app = express();
+const helmet = require("helmet");
 
 const port = 3000;
 
 const portfolioView = require("./routes/portfolio/portfolio");
+
+app.use(helmet());
 
 app.use("/static", express.static(path.join(__dirname, "public")));
 
