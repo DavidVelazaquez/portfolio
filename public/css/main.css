@@ -387,7 +387,7 @@ body {
   content: "JavaScript";
 }
 .js span {
-  width: 55%;
+  width: 60%;
 }
 
 .git {
@@ -427,7 +427,7 @@ body {
   content: "ReactJS";
 }
 .react span {
-  width: 45%;
+  width: 50%;
 }
 
 .node {
@@ -437,7 +437,7 @@ body {
   content: "NodeJS";
 }
 .node span {
-  width: 45%;
+  width: 50%;
 }
 
 .express {
@@ -457,7 +457,7 @@ body {
   content: "Docker";
 }
 .docker span {
-  width: 40%;
+  width: 45%;
 }
 
 .footer {
