@@ -1,4 +1,4 @@
-const { MongoClient } = require("mongodb");
+const { MongoClient, ObjectId } = require("mongodb");
 const config = require("../config/config");
 
 const USER = encodeURIComponent(config.dbUser);
@@ -36,6 +36,22 @@ class MongoLib {
         .find(query)
         .toArray();
     });
+  }
+
+  create(collection, data) {
+    return this.connect()
+      .then(db => {
+        return db.collection(collection).insertOne(data);
+      })
+      .then(result => result.insertedId);
+  }
+
+  delete(collection, id) {
+    return this.connect()
+      .then(db => {
+        return db.collection(collection).deleteOne({ _id: ObjectId(id) });
+      })
+      .then(() => id);
   }
 }
 

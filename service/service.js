@@ -12,6 +12,21 @@ class ProjectsService {
     const projects = await this.mongoDb.getAllProjects(this.collection, query);
     return projects || [];
   }
+
+  async createProject({ project }) {
+    const createdProduct = await this.mongoDb.create(this.collection, {
+      project
+    });
+    return createdProduct;
+  }
+
+  async deleteProject({ projectId }) {
+    const deletedProjectId = await this.mongoDb.delete(
+      this.collection,
+      projectId
+    );
+    return deletedProjectId;
+  }
 }
 
 module.exports = ProjectsService;
