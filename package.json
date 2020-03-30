@@ -12,6 +12,7 @@
   "author": "David Velazquez davidarmando.gdl@live.com",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "cross-env": "^7.0.0",
     "dotenv": "^8.2.0",
     "ejs": "^3.0.1",

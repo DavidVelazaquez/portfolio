@@ -14,9 +14,7 @@ class ProjectsService {
   }
 
   async createProject({ project }) {
-    const createdProduct = await this.mongoDb.create(this.collection, {
-      project
-    });
+    const createdProduct = await this.mongoDb.create(this.collection, project);
     return createdProduct;
   }
 

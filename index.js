@@ -2,11 +2,15 @@ const express = require("express");
 const path = require("path");
 const app = express();
 const helmet = require("helmet");
+const bodyParser = require("body-parser");
 
 const port = 3000;
 
 const portfolioView = require("./routes/portfolio/portfolio");
 const portfolioApi = require("./routes/api/portfolioApi");
+
+app.use(bodyParser.json());
+app.use(express.urlencoded());
 
 app.use(helmet());
 
