@@ -26,6 +26,24 @@ router.post("/", async (req, res, next) => {
   }
 });
 
+router.put("/:projectId", async (req, res, next) => {
+  const { projectId } = req.params;
+  const { body: project } = req;
+  console.log(req.body);
+  try {
+    const updatedProject = await projectsService.updateProject({
+      projectId,
+      project
+    });
+    res.status(200).json({
+      data: { id: updatedProject, body: project },
+      message: "Project updated"
+    });
+  } catch (error) {
+    next(error);
+  }
+});
+
 router.delete("/:projectId", async (req, res, next) => {
   const { projectId } = req.params;
   try {

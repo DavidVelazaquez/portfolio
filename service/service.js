@@ -18,6 +18,15 @@ class ProjectsService {
     return createdProduct;
   }
 
+  async updateProject({ projectId, project }) {
+    const updatedProject = await this.mongoDb.update(
+      this.collection,
+      projectId,
+      project
+    );
+    return updatedProject;
+  }
+
   async deleteProject({ projectId }) {
     const deletedProjectId = await this.mongoDb.delete(
       this.collection,
